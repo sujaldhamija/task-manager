@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "125127e7-3f58-4be2-a031-6c27a2cc48aa",
+		"name": "User Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25375773"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"RMBJwvk8qX9QCRB99XpV1nXqC1X4F4\",\r\n    \"title\": \"title\",\r\n    \"desc\": \"This is a test Desc\",\r\n    \"due_date\": \"2024-12-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/create-task"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"rciuWS2W2JV7p2tYcVlH5NblpURP2E\"\r\n    // ,\"task_id\": 9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/get-tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"YB5S2CZQwPGy6zCeCJbabTlkFQfjYd\",\r\n    \"task_id\": 9,\r\n    \"title\": \"title 123\",\r\n    \"desc\": \"desc 123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/update-task"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"LrPtcO3TtlKfNvi23T6F8XAH8BoJ4E\",\r\n    \"task_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/delete-task"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Access Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"06TJqnmASmMQxzFOp3xEC9W1myz5lI\",\r\n    \"task_id\": 3,\r\n    \"type\": \"assign\",\r\n    \"users\": [1,4,5,6,8]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/update-access-task"
+			},
+			"response": []
+		},
+		{
+			"name": "Task Access List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"auth\": \"LrPtcO3TtlKfNvi23T6F8XAH8BoJ4E\"\r\n    ,\"task_id\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/task-access"
+			},
+			"response": []
+		}
+	]
+}
